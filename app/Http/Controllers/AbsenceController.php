@@ -24,12 +24,14 @@ class AbsenceController extends Controller
 
     public function simpan()
     {
-        /*$input=Request::all();
+        $input=Request::all();
         $input['tgl'] = Carbon::now();
         absence::create($input);
-        return redirect ('absence');*/
-        absence::create(Request::all());
         return redirect ('absence');
+
+       /* $input['tgl'] = Carbon::now();
+        absence::create(Request::all());
+        return redirect ('absence');*/
 
 
 
