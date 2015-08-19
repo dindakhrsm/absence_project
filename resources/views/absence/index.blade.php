@@ -4,10 +4,10 @@
 
     <div class="row">
         <div class="col-lg-12">
-           <h1 class="page-header" style= "background-color:#222222; color:#DEDEDE; text-align:center"><center>
-                    {!! HTML::image('./img/logo.jpg', 'alt', array( 'width' => 150, 'height' => 150 )) !!} ONLINE ABSENCE SYSTEM
-            </h1></center>
-            <h2 style= "text-align:center"><small><center>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:: Department of Mathematics, Faculty of Mathematics and Natural Science State University of Jakarta ::</center></small></h2></tr>
+           <h1 class="page-header" style= "background-color:#222222; color:#DEDEDE; text-align:center">
+                    {!! HTML::image('./img/logo.jpg', 'alt', array( 'width' => 150, 'height' => 150 )) !!} ONLINE PRESENCE SYSTEM
+            </h1>
+            <h2 style= "text-align:center"><small>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:: Department of Mathematics, Faculty of Mathematics and Natural Science State University of Jakarta ::</small></h2></tr>
             <br>
             </br>
 
@@ -71,21 +71,25 @@
             <br>
             </>
 
-
-    <h2 style="color:red"><center> Welcome! </center></h2>
+<!-- to show database -->
+    <h2 style="color:red; text-align:center">Welcome!</h2>
     <table width="800" border="1" align = "center">
             <tr>
-                <th><center>NO</center></th> <th><center>Noreg</center></th> <th><center>Nama</center></th> <th><center>Prodi</center></th> <th><center>Keterangan</center></th> <th><center>Tanggal</center></th>
+                <th style="text-align:center">NO</th> <th style="text-align:center">Noreg</th> <th style="text-align:center">Nama</th> <th style="text-align:center">Prodi</th> <th style="text-align:center">Keterangan</th> <th style="text-align:center">Tanggal</th>
             </tr>
+
             @foreach($absence as $absences)
+                <!--<tr>-->
                 <absence>
+                    <table width="800" border="1" align = "center">
                     <tr>
-                        <td><center>{{$absences->no}}</center></td> <td><center>{{$absences->noreg}}</center></td> <td>{{$absences->nama}}</td> <td><center>{{$absences->prodi}}</center></td> <td><center>{{$absences->keterangan}}</center></td> <td><center>{{$absences->tgl}}</center></td>
+                        <td style="text-align:center">&nbsp;&nbsp;&nbsp;{{$absences->no}}&nbsp;&nbsp;&nbsp;</td> <td style="text-align:center">{{$absences->noreg}}</td> <td style="text-align:center">{{$absences->nama}}</td> <td style="text-align:center">{{$absences->prodi}}</td> <td style="text-align:center">{{$absences->keterangan}}</td> <td style="text-align:center">{{$absences->tgl}}</td>
                     </tr>
                     </table>
                 </absence>
 
     @endforeach
+        </table>
             <button class="btn btn-default btn-block" onClick="window.location='http://localhost/first_project/public'">HOME</button>
             <button class="btn btn-default btn-block" onClick="window.location='http://localhost/first_project/public/absence/tambah'">INPUT ABSEN</button>
     </div>
