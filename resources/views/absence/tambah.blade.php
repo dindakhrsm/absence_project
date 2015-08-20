@@ -1,13 +1,12 @@
 @extends('layouts.master')
 
-
 @section('content')
     <div class="row">
-        <div class="col-lg-120">
+        <div class="col-lg-12">
 
-                <h1 class="page-header" style= "background-color:#222222; color:#DEDEDE; text-align:center"><center>
-                        {!! HTML::image('./img/logo.jpg', 'alt', array( 'width' => 150, 'height' => 150 )) !!} ONLINE ABSENCE SYSTEM
-                </h1></center>
+                <h1 class="page-header" style= "background-color:#222222; color:#DEDEDE; text-align:center">
+                        {!! HTML::image('./img/logo.jpg', 'alt', array( 'width' => 150, 'height' => 150 )) !!} ONLINE PRESENCE SYSTEM
+                </h1>
                 <h2 style= "text-align:center"><small>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:: Department of Mathematics, Faculty of Mathematics and Natural Science State University of Jakarta :: </small></h2></tr>
                 <br>
                 </br>
@@ -81,7 +80,7 @@
                     <td width="200"></td>
                     <td>
 
-                <center>{!! Form::open((['url'=> 'absence'])) !!}
+                <div style="text-align: center;">{!! Form::open((['url'=> 'absence'])) !!}
                         <p class="animate4 bounceIn"><input type="text" id="noreg" name="noreg" placeholder="No Registrasi" /></p>
                         </p>
                         <p>
@@ -106,7 +105,7 @@
                         </p>
                         <p>
                             <input name="submit" type="submit" id="submit" value="Submit">
-                        </p></center>
+                        </p></div>
                 {!! Form::close() !!}
                     <td width="150"></td>
                 </tr>
